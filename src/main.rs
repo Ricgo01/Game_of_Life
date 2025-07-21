@@ -26,6 +26,8 @@ fn main() {
 
 
     game.spawn_pattern(110, 54, &patterns::pulsar(), 2);
+        game.spawn_pattern(150, 34, &patterns::mwss(), 2);
+
     game.spawn_pattern(70, 54, &patterns::pulsar(), 4);
     game.spawn_pattern(100, 50, &patterns::pentadecathlon(),2);
 
@@ -38,7 +40,17 @@ fn main() {
         game.spawn_pattern(180 - i * 5, 2 + i * 3, &patterns::lwss(),4);
     }
     game.spawn_pattern(5, 60, &patterns::hwss(),3);
-    game.spawn_pattern(180, 60, &patterns::mwss(),3);
+    game.spawn_pattern(5, 50, &patterns::hwss(),3);
+    game.spawn_pattern(5, 40, &patterns::hwss(),3);
+    game.spawn_pattern(5, 30, &patterns::hwss(),3);
+    game.spawn_pattern(5, 20, &patterns::hwss(),3);
+
+    
+    for i in 0..10 {
+        game.spawn_pattern(5, 100-i, &patterns::hwss(),3);
+        game.spawn_pattern(100, 0+i, &patterns::hwss(),3);
+    } 
+    
 
 
     for i in 0..20 {
