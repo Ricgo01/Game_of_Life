@@ -84,7 +84,7 @@ fn main() {
     let mut generation = 0;
     
     while !raylib_handle.window_should_close() {
-        if generation % 4 == 0 { 
+        if generation % 3 == 0 { 
             game.update();
         }
         
@@ -93,6 +93,6 @@ fn main() {
         framebuffer.swap_buffers(&mut raylib_handle, &raylib_thread);
         
         generation += 1;
-        thread::sleep(Duration::from_millis(16));
+        thread::sleep(Duration::from_millis(8));
     }
 }
